@@ -1,7 +1,7 @@
 // Created by: Alex Nelson
-// Created on: Oct 2022
+// Created on: Nov 2022
 //
-// This program calculates area of a triangle
+// This program tells you which age range of movies you can
 using System;
 
 class Program
@@ -9,19 +9,31 @@ class Program
     public static void Main(string[] args)
     {
         //Input
-        int length;
-        int width;
-        int area;
-        Console.WriteLine("This program calculates the area of a triangle");
+        Console.WriteLine("Students between 12 and 21 recieve a discount to the museum on weekdays. Enter in your age and the day you're visiting the museum below ");
         Console.WriteLine("");
-        Console.WriteLine("Enter length in cm: ");
-        length = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter width in cm: ");
-        width = Convert.ToInt32(Console.ReadLine());
-        area = length * width / 2;
+        Console.WriteLine("Please enter your age");
+        //input
+        int age = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("");
+        Console.WriteLine("Please enter the day as a number(Monday being 1, and Sunday being 7)");
+        //input
+        int day = Convert.ToInt32(Console.ReadLine());
+        //Procces
+        Console.WriteLine("");
+        //Procces
+        if (day > 7) {
+           Console.WriteLine("You have input something incorrectly. Please relaunch code.");
+        }
+        else if ((age > 12 && age < 21) && (day != 6 && day != 7))
+        {
+            //Output
+            Console.WriteLine("Eligible!");
+        }
         //Output
-        Console.WriteLine("");
-        Console.WriteLine("The area is: " + area + " cm²");
+        else
+        {
+            Console.WriteLine("Not Eligible!");
+        }
         Console.WriteLine("\nDone");
     }
 }

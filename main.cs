@@ -21,7 +21,7 @@ class Program
         //Procces
         Console.WriteLine("");
         //Procces
-        if (day > 7){
+        if (day > 7) {
             Console.WriteLine("You have input something incorrectly. Please relaunch code.");
         }
         else if ((age > 12 && age < 21) && (day != 6 && day != 7))

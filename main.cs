@@ -8,29 +8,27 @@ class Program
 {
     public static void Main(string[] args)
     {
-        //Input
-        Console.WriteLine("Students between 12 and 21 recieve a discount to the museum on weekdays. Enter in your age and the day you're visiting the museum below ");
+        //Explanation of the algorithm
+        Console.WriteLine("Students between 12 and 21 receive a discount to the museum on weekdays. Enter in your age and the day you're visiting the museum below ");
         Console.WriteLine("");
         Console.WriteLine("Please enter your age");
-        //input
+        //Input for user’s age
         int age = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("");
         Console.WriteLine("Please enter the day as a number(Monday being 1, and Sunday being 7)");
-        //input
+        //Input for the day of the week
         int day = Convert.ToInt32(Console.ReadLine());
-        //Procces
         Console.WriteLine("");
-        //Procces
-        if (day > 7)
-        {
-            Console.WriteLine("You have input something incorrectly. Please relaunch code.");
+        //Process: Function to tell the user to restart if the number is more than 7
+        if (day > 7) {
+           Console.WriteLine("You have input something incorrectly. Please relaunch code.");
         }
         else if ((age > 12 && age < 21) && (day != 6 && day != 7))
         {
-            //Output
+            //If eligible output “Eligible”
             Console.WriteLine("Eligible!");
         }
-        //Output
+        //If not eligible output “Not Eligible”
         else
         {
             Console.WriteLine("Not Eligible!");
